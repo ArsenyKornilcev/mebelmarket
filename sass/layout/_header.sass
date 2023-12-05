@@ -1,5 +1,27 @@
 .header
+    padding-top: 1.5rem
+
     &__top, &__menu
         display: flex
         justify-content: space-between
         align-items: center
+
+    .container
+        display: flex
+        flex-flow: column nowrap
+        gap: 1.5rem
+
+        &::after
+            content: ''
+            display: block
+            opacity: 0.3
+            background: #FCF3EC
+            width: 100%
+            height: 1px
+            order: 2
+
+    &__top
+        order: 1
+
+    &__menu
+        order: 3
