@@ -1,0 +1,52 @@
+.footer
+    height: 29.875rem
+    background: url(../img/bg/footer_bg.png)
+    background-repeat: no-repeat
+    background-size: cover
+
+    .container
+        padding: 3.12rem 4.37rem
+        border-radius: 3.125rem
+        border: 1px solid #FCF3EC
+        background: #FFF
+        display: flex
+        flex-flow: column wrap
+        justify-content: space-between
+        min-height: 26.625rem
+        transform: translateY(-7.5rem)
+
+    &__top
+        display: flex
+        justify-content: space-between
+
+        .menu
+            &__columns
+                display: flex
+                justify-content: space-between
+                flex-grow: 1
+                max-width: 65rem
+            &__block
+                display: flex
+                gap: 5.62rem
+
+            &__column
+                display: flex
+                flex-flow: column wrap
+                gap: 1.25rem
+
+                a
+                    color: $base-black
+                    font-size: 1rem
+                    line-height: 162.5%
+                    text-decoration: none
+
+        .column
+            display: flex
+            flex-flow: column wrap
+            align-items: end
+            gap: 1.54rem
+
+    &__bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
