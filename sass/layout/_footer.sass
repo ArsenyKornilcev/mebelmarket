@@ -7,8 +7,8 @@
 
     .up
         position: absolute
-        right: 50px
-        bottom: 50px
+        right: 3.12rem
+        bottom: 3.12rem
 
         width: 61px
         height: 108px
@@ -21,7 +21,7 @@
         align-items: center
         justify-content: center
         cursor: pointer
-        
+
         div
             display: flex
             align-items: center
@@ -69,6 +69,20 @@
                     transition: .3s ease
                     &:hover
                         color: $base-orange
+
+        @media (max-width: 1680px)
+            .menu
+                &__columns
+                    max-width: 65vw
+                &__block
+                    gap: 5vw
+        @media (max-width: 1480px)
+            .menu
+                &__columns
+                    max-width: max-content
+                    gap: 5vw
+                &__block
+                    gap: 4vw
 
         .column
             display: flex
