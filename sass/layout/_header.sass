@@ -63,6 +63,8 @@
                     gap: 2vw
     @media (max-width: 1270px)
         &__top
+            .location
+                flex-grow: 1
             .search
                 display: none
             .profile
@@ -78,14 +80,19 @@
                 min-width: 400px
 
     @media (max-width: 1210px)
-        &__top
-            .location
-                flex-grow: 1
         &__menu
             gap: 1rem
 
     @media (max-width: 1030px)
         &__top
             .location
+                span
+                    display: none
+
+    @media (max-width: 930px)
+        &__top
+            .location
+                display: none
+            .profile
                 span
                     display: none
