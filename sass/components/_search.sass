@@ -15,7 +15,9 @@
         border-radius: 0.625rem
         border: 1px solid #C5C5C5
         background: rgba(255, 255, 255, 0.3)
+        outline: none
         width: 100%
+
         &::placeholder
             opacity: .3
 
@@ -28,6 +30,11 @@
         padding: 0
         transform: translateY(-50%)
 
-        img
+        svg
             width: 1.5rem
             height: 1.5rem
+            *
+                transition: .3s ease
+            &:hover
+                circle
+                    stroke: $base-orange

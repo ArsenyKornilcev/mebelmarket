@@ -2,7 +2,17 @@
     display: flex
     align-items: center
     gap: 0.88rem
+    cursor: pointer
 
-    img
+    &:hover
+        span
+            text-decoration: underline
+        path
+            stroke: $base-orange
+
+    svg
         width: 1.5rem
         height: 1.5rem
+
+        *
+            transition: .3s ease

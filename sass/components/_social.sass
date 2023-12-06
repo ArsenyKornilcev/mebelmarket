@@ -1,7 +1,18 @@
 .social
     display: flex
     gap: 1.25rem
+    
+    a
+        text-decoration: none
 
-    img
+        &:hover
+            circle
+                fill: $base-orange
+            path
+                fill: $base-beige
+
+    svg
         width: 2.5rem
         height: 2.5rem
+        *
+            transition: .1s ease
