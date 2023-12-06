@@ -30,6 +30,10 @@
             height: 30px
             background: #fff
             border-radius: 10px
+    @media (max-width: 1400px)
+        .up
+            bottom: 2.5vw
+            right: 2.5vw
 
     .container
         padding: 3.12rem 4.37rem
@@ -82,7 +86,13 @@
                     max-width: max-content
                     gap: 5vw
                 &__block
+                    gap: 3vw
+        @media (max-width: 1240px)
+            .menu
+                &__columns
                     gap: 4vw
+                &__block
+                    gap: 2vw
 
         .column
             display: flex

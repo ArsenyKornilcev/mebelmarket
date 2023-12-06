@@ -10,9 +10,25 @@
     text-align: center
     text-transform: uppercase
 
+    svg
+        display: none
+
     &_orange
         background: $base-orange
         color: #fff
         &:hover
             background: #FF6B23
             color: #fff
+
+    @media (max-width: 1300px)
+        &_icon
+            width: 3.125rem
+            display: flex
+            justify-content: center
+            align-items: center
+
+            span
+                display: none
+            svg
+                display: block
+            

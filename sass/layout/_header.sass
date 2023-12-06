@@ -27,6 +27,9 @@
     &__menu
         order: 3
 
+        .search, .location
+            display: none
+
         .group
             display: flex
             align-items: center
@@ -54,3 +57,28 @@
                 gap: 3vw
                 ul
                     gap: 2vw
+    @media (max-width: 1270px)
+        &__top
+            .search
+                display: none
+            .profile
+                span
+                    display: block
+            .location
+                margin-right: 17vw
+        &__menu
+            .group
+                ul
+                    display: none
+            .search
+                display: flex
+                margin-right: 40vw
+                max-width: 33vw
+
+    @media (max-width: 1270px)
+        &__top
+            .location
+                flex-grow: 1
+                margin-right: 0
+        &__menu
+            gap: 1rem
