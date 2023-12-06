@@ -1,5 +1,5 @@
 .footer
-    height: 29.875rem
+    min-height: 29.875rem
     background: url(../img/bg/footer_bg.png)
     background-repeat: no-repeat
     background-size: cover
@@ -93,6 +93,16 @@
                     gap: 4vw
                 &__block
                     gap: 2vw
+        @media (max-width: 1170px)
+            .menu
+                &__columns
+                    gap: 2vw
+                &__block
+                    gap: 2vw
+        @media (max-width: 1130px)
+            .menu
+                &__columns
+                    display: grid
 
         .column
             display: flex
@@ -104,3 +114,33 @@
         display: flex
         justify-content: space-between
         align-items: center
+
+    @media (max-width: 1130px)
+        .container
+            gap: 3rem
+            position: relative
+        &__top
+            .menu
+                &__columns
+                    flex-flow: column wrap
+                    gap: 3.19rem
+                &__block
+                    gap: 3.5rem
+                    &:last-of-type
+                        flex-flow: column wrap
+                        gap: 1.5rem
+        &__bottom
+            flex-flow: column wrap
+            align-items: end
+            position: absolute
+            right: 4.37rem
+            bottom: 3.12rem
+            gap: 1.87rem
+            .credits
+                flex-flow: column wrap
+                align-items: end
+                gap: 1rem
+        .up
+            bottom: 23.5rem
+            right: 8vw
+

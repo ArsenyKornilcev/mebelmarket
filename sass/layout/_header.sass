@@ -6,6 +6,10 @@
         justify-content: space-between
         align-items: center
 
+    .left_group
+        display: flex
+        gap: 1rem
+
     .container
         display: flex
         flex-flow: column nowrap
@@ -64,21 +68,24 @@
             .profile
                 span
                     display: block
-            .location
-                margin-right: 17vw
         &__menu
             .group
                 ul
                     display: none
             .search
                 display: flex
-                margin-right: 40vw
                 max-width: 33vw
+                min-width: 400px
 
-    @media (max-width: 1270px)
+    @media (max-width: 1210px)
         &__top
             .location
                 flex-grow: 1
-                margin-right: 0
         &__menu
             gap: 1rem
+
+    @media (max-width: 1030px)
+        &__top
+            .location
+                span
+                    display: none
