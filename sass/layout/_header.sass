@@ -31,7 +31,7 @@
     &__menu
         order: 3
 
-        .search, .location
+        .search, .location, .number
             display: none
 
         .group
@@ -103,6 +103,47 @@
                 a
                     font-size: 1.125rem
         &__menu
-            .search input
+            .search
                 max-width: none
                 min-width: 0
+    @media (max-width: 730px)
+        &__top
+            .number
+                a
+                    font-size: 1rem
+    @media (max-width: 680px)
+        &__top
+            .number
+                display: none
+        &__menu
+            .info
+                display: none
+            .location, .number
+                display: flex
+            .number
+                button
+                    display: none
+            .search
+                flex-grow: 0
+                min-width: 0
+                max-width: fit-content
+                input
+                    display: none
+                button
+                    position: static
+                    transform: translate(0)
+            .left_group
+                flex-grow: 1
+                justify-content: space-between
+                .right_group
+                    display: flex
+                    gap: 1.88rem
+                    align-items: center
+    @media (max-width: 540px)
+        &__menu
+            .number
+                a, button
+                    display: none
+            .location
+                span
+                    display: none
