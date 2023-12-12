@@ -1,6 +1,26 @@
 .slider
     margin-top: 40px
     margin-bottom: 100px
+    position: relative
+
+    &__dots
+        position: absolute
+        left: 50%
+        bottom: 30px
+        transform: translateX(-50%)
+        display: flex
+        gap: 14px
+    &__dot
+        border-radius: 3px
+        background: #fff
+        width: 14px
+        height: 14px
+        cursor: pointer
+        
+        &.current
+            background: $base-orange
+            cursor: default
+
     &__slides
         max-height: 666px
 
@@ -20,7 +40,6 @@
         width: 100%
 
     .slide
-
         &__text
             max-width: 696px
             padding-top: 110px
