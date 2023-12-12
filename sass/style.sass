@@ -17,6 +17,30 @@ body
 html
     font-size: 16px
 
+.h1
+    font-size: 70px
+
+.h2
+    font-size: 40px
+
+.h3
+    font-size: 36px
+
+.h4, .h5
+    font-size: 16px
+
+@media (max-width: 768px)
+    .h1
+        font-size: 40px
+    .h2, .h3
+        font-size: 30px
+
+@media (max-width: 320px)
+    .h1, .h2
+        font-size: 24px
+    .h3
+        font-size: 20px
+
 .divider
     height: 300px
     background: #6d6d6d
@@ -39,3 +63,163 @@ html
 @media (max-width: 540px)
     html
         font-size: 16px
+
+// made by Anton
+.form_question
+    max-width: 1620px
+    width: 100%
+    height: 100%
+    margin-bottom: 227px
+    padding-top: 44.28px
+
+    &_background
+        max-width: 1620px
+        width: 100%
+        min-height: 372px
+        height: 100%
+        border-radius: 50px
+        background: #C2DEED
+        display: inline-flex
+
+    &_background_img
+        max-width: 426px
+        width: 100%
+        max-height: 380px
+        height: 100%
+        bottom: 44.28px
+        position: relative
+
+    &_background_form
+        display: inline-flex
+        flex-direction: column
+        margin-left: 120px
+        margin-top: 69.72px
+        margin-right: 73px
+
+    &_background_form_question
+        max-width: 944px
+        width: 100%
+
+    &_background_form_question_h1
+        color: var(--3-e-3-e-3-e, #3E3E3E)
+        font-size: 70px
+        font-style: normal
+        font-weight: 400
+        line-height: 70px
+
+        margin-bottom: 24px
+
+    &_background_form_question_p1
+        max-width: 849px
+        width: 100%
+
+        color: var(--3-e-3-e-3-e, #3E3E3E)
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 26px
+
+        margin-bottom: 40px
+
+    &_background_form_question_htmlform
+        display: inline-flex
+        align-items: flex-start
+        gap: 14px
+        max-width: 944px
+        width: 100%
+
+        margin-bottom: 14.28px
+        flex-wrap: wrap
+
+    &_background_form_question_htmlform_btn
+        border-radius: 0.625rem
+        font-size: 1rem
+        font-style: normal
+        font-weight: 400
+        line-height: 112.5%
+        width: 12.5rem
+        height: 3.125rem
+        padding: 1.06rem 0
+        text-align: center
+        text-transform: uppercase
+        border: 1px solid transparent
+
+    &_background_form_question_htmlform_email
+        border-radius: 10px
+        background: #FFF
+        border: 0px solid transparent
+
+    &_background_form_question_htmlform_email
+        color: var(--3-e-3-e-3-e, #3E3E3E)
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 26px
+
+    &_background_form_question_htmlform input
+        max-width: 358px
+        width: 100%
+        min-height: 50px
+        padding: 0 10px 0 30px
+
+    &_background_form_div_check
+        margin-bottom: 70px
+
+    &_background_form_check_text
+        color: var(--3-e-3-e-3-e, #3E3E3E)
+        font-size: 12px
+        font-style: normal
+        font-weight: 400
+        line-height: 16px
+        width: 57vw
+
+    &_background_form_check
+        width: 14px
+        height: 14px
+        border: 0px solid #555555
+        background-clip: content-box
+        padding: 3px
+        background: white
+        border-radius: 4px
+
+        position: relative
+        top: 6px
+
+    &_background_form_check[type="checkbox"]
+        appearance: none
+        width: 20px
+        min-height: 20px
+        border: 0px solid #555555
+        background-clip: content-box
+        padding: 0px
+
+    input[type="checkbox"]:checked
+        background-color: #555555
+
+@media only screen and (max-width: 1544px)
+    .form_question_background_img
+        display: none
+
+@media only screen and (max-width: 1680px)
+    .form_question_background_form
+        margin-left: 7vw
+        margin-top: 69.72px
+        margin-right: 5vw
+
+@media only screen and (max-width: 1040px)
+    .form_question_background_form_question_h1
+        font-size: 30px
+        line-height: 40px
+
+    .form_question_background_form
+        margin-top: 7.5vw
+
+@media only screen and (max-width: 768px)
+    .form_question_background_form_question_h1
+        margin-bottom: 20px
+
+    .form_question_background_form_check_label
+        display: inline-flex
+        margin-left: 120px
+        margin-top: 69.72px
+        margin-right: 73px
