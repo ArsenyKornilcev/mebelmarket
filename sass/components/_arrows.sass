@@ -1,0 +1,27 @@
+.arrows
+    display: flex
+    gap: 10px
+
+    .arrow
+        width: 30px
+        height: 30px
+        background: #fff
+        border-radius: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+
+        &:hover
+            background: $base-orange
+            path
+                stroke: #fff
+        
+
+        &:nth-child(2)
+            svg
+                transform: rotateZ(180deg)
+
+    &_beige
+        .arrow
+            background: $base-beige
