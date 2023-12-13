@@ -16,7 +16,7 @@
         width: 14px
         height: 14px
         cursor: pointer
-        
+
         &.current
             background: $base-orange
             cursor: default
@@ -70,6 +70,23 @@
         &__product
             position: relative
 
+            img
+                position: relative
+                z-index: 3
+            &::after
+                position: absolute
+                bottom: -10px
+                left: 50%
+                transform: translateX(-50%)
+                z-index: 2
+                display: block
+                content: ''
+                width: 535px
+                height: 50px
+                border-radius: 50%
+                opacity: 0.5
+                background: radial-gradient(50% 50% at 50% 50%, #000 0%, rgba(0, 0, 0, 0.00) 100%)
+
             &:nth-child(1) .info
                 bottom: 0
                 left: -250px
@@ -90,6 +107,7 @@
                 display: flex
                 flex-flow: column wrap
                 gap: 4px
+                z-index: 4
 
                 .price
                     color: $base-orange
