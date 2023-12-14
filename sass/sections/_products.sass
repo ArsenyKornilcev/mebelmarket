@@ -1,0 +1,114 @@
+.products
+
+    .link
+        margin-top: 50px
+
+    .title
+        margin-bottom: 40px
+
+    &__items
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px
+
+    &__item
+        padding: 30px
+        background: #fff
+        border-radius: 20px
+        border: 1px solid $base-beige
+
+    .item
+        &_img
+            position: relative
+            height: 238px
+            display: flex
+            flex-flow: row wrap
+            justify-content: space-between
+            margin-bottom: 30px
+
+            .labels
+                display: flex
+                gap: 10px
+                position: relative
+                z-index: 4
+                .label
+                    background: $base-orange
+                    color: #fff
+                    height: fit-content
+                    padding: 10px
+                    text-transform: uppercase
+                    border-radius: 10px
+
+            .svgs
+                display: flex
+                flex-flow: column wrap
+                gap: 30px
+                position: relative
+                z-index: 4
+                svg
+                    *
+                        transition: .3s ease
+                svg:hover
+                    circle
+                        fill: $base-orange
+                    path
+                        stroke: #fff
+                        fill: #fff
+
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: contain
+                object-position: center center
+
+        &_text
+            display: flex
+            flex-flow: column wrap
+            gap: 30px
+
+            .name
+                text-transform: uppercase
+                color: $base-black
+                font-size: 16px
+                line-height: 125%
+                margin-bottom: 14px
+
+            .price
+                color: $base-orange
+                font-size: 24px
+                line-height: 83.333%
+
+            .btns
+                display: flex
+                align-items: center
+                gap: 10px
+
+    &__nav
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 20px
+
+    &__cats
+        display: flex
+        align-items: center
+        gap: 14px
+
+    &__cat
+        padding: 8px 50px
+        background: $base-beige
+        border-radius: 10px
+        cursor: pointer
+        border: 1px solid transparent
+        transition: .3s ease
+
+        &:hover
+            border-color: $base-blue-gray
+            background-color: #fff
+
+        &.current, &:hover.current
+            background: $base-blue-gray
+            cursor: default
