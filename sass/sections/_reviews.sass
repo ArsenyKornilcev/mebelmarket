@@ -1,0 +1,41 @@
+.reviews
+    &__header
+        position: relative
+
+        .arrows
+            position: absolute
+            right: 0
+            top: 40px
+
+    .link
+        margin-top: 50px
+
+    &__items
+        display: grid
+        gap: 20px
+        grid-template-columns: repeat(2, 1fr)
+        
+    .reviews__items
+        margin-top: 40px
+
+    &__item
+        display: flex
+        flex-flow: column wrap
+        gap: 24px
+        padding: 30px 100px
+        color: $base-black
+        font-size: 16px
+        line-height: 162.5%
+        border-radius: 20px
+        border: 1px solid $base-beige
+
+    .item
+        &_stars
+            display: flex
+            gap: 5px
+        &_footer
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+        &_data
+            opacity: 0.3
