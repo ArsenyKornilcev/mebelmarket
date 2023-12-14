@@ -1,0 +1,44 @@
+.about
+    &__blocks
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 92px
+        padding: 60px 0
+        border-top: 1px solid $base-beige
+        border-bottom: 1px solid $base-beige
+        margin: 100px 0
+
+    &__block
+        display: flex
+        flex-flow: column wrap
+
+        ul
+            display: flex
+            gap: 20px
+            flex-flow: column wrap
+            list-style: none
+            padding: 0
+            margin: 0
+
+            li
+                color: $base-black
+                font-size: 16px
+                line-height: 162.5%
+                display: flex
+                gap: 14px
+
+                &::before
+                    content: ''
+                    display: block
+                    min-width: 14px
+                    height: 14px
+                    border-radius: 3px
+                    background: $base-orange
+
+    &__target
+        margin-top: 30px
+        font-size: 16px
+        line-height: 162.5%
+
+    &__title
+        line-height: 50px
