@@ -11,7 +11,7 @@
         gap: 20px
 
         &_1
-            .advantages-grid__row
+            .advantages-grid__group
                 display: flex
                 flex-flow: row nowrap
                 gap: 20px
@@ -21,7 +21,6 @@
 
         &_2
             max-width: 636px
-                    
 
     &__item
         padding: 50px
@@ -63,3 +62,14 @@
             gap: 35px
             p
                 margin: 0
+
+    @media (max-width: 1355px)
+        &__block_1
+            .advantages-grid__group
+                flex-flow: column wrap
+
+                .advantages-grid__item:nth-child(1)
+                    max-width: none
+
+        &__block_2
+            width: 100%
