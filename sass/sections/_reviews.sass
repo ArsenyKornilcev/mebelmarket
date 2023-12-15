@@ -1,6 +1,6 @@
 .reviews
     margin: 100px 0
-    
+
     &__header
         position: relative
 
@@ -16,7 +16,7 @@
         display: grid
         gap: 20px
         grid-template-columns: repeat(2, 1fr)
-        
+
     .reviews__items
         margin-top: 40px
 
@@ -41,3 +41,13 @@
             align-items: flex-end
         &_data
             opacity: 0.3
+
+    @media (max-width: 1024px)
+        &__items
+            display: flex
+        &__item
+            min-height: 280px
+            padding: 30px 60px
+            
+            &:nth-child(2)
+                display: none
