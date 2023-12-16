@@ -83,10 +83,16 @@
             display: flex
             align-items: flex-end
             flex-flow: row wrap
-            gap: 45px
-            flex-grow: 1
-            padding-bottom: 98px
             position: relative
+            flex-grow: 1
+
+        &__group
+            display: flex
+            align-items: flex-end
+            flex-flow: row wrap
+            gap: 45px
+            padding-bottom: 98px
+
         &__product
             position: relative
 
@@ -146,39 +152,46 @@
                 height: 100%
                 z-index: 6
 
-                &:hover
-                    .name
-                        text-decoration: underline
+            &:hover
+                .name
+                    text-decoration: underline
 
             .price
                 color: $base-orange
                 font-size: 30px
                 line-height: 133.333%
 
-    @media (max-width: 1660px)
-        .slide__product
-            &:nth-child(1)
-                .info
-                    left: -133px
-            &:nth-child(2)
-                .info
-                    right: -2vw
-
     @media (max-width: 1380px)
+        &__container
+            .arrows
+                left: 330px
+                top: 378px
         .slide__content
             flex-flow: column wrap
             height: auto
+
         .slide__products
-            padding: 0 110px 100px
-            justify-content: flex-end
-            &:nth-child(1), &:nth-child(2)
-                .info
-                    left: unset
-                    right: unset
-                    top: unset
-                    bottom: unset
+            justify-content: space-between
+            padding: 0 5vw 92px
+
+        .slide__product-info
+            position: relative
+            width: auto
+            padding: 0
+            flex-flow: column wrap
+            gap: 20px
+            align-items: flex-start
+            justify-content: center
+            align-self: flex-start
 
         &__slides
             max-height: none
         &__slide
             height: auto
+
+    @media (max-width: 1080px)
+        .slide__products
+            padding: 0 24px 92px 50px
+        .slide__text
+            padding: 60px 50px 0
+            max-width: none
