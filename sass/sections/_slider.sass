@@ -169,10 +169,11 @@
         .slide__content
             flex-flow: column wrap
             height: auto
-
+        .slide__group
+            padding: 0
         .slide__products
             justify-content: space-between
-            padding: 0 5vw 92px
+            padding: 0 5vw 92px 100px
 
         .slide__product-info
             position: relative
@@ -190,8 +191,51 @@
             height: auto
 
     @media (max-width: 1080px)
+        .slide__content
+            gap: 0
+        &__container
+            .arrows
+                left: 280px
+                top: 328px
         .slide__products
             padding: 0 24px 92px 50px
+            .slide__product
+
+                &:nth-child(1)
+                    &::after
+                        display: none
+                    img
+                        width: 20vw
+                &:nth-child(2)
+                    &::after
+                        left: -30%
+                    img
+                        width: 19.9vw
         .slide__text
             padding: 60px 50px 0
             max-width: none
+        .slide__product-info
+            padding-top: 55px
+            .info
+                max-width: 260px
+                font-size: 16px
+                line-height: 125%
+                .price
+                    font-size: 20px
+                    line-height: 150%
+
+    @media (max-width: 768px)
+        .slide__products
+            padding: 0 24px 92px 50px
+            .slide__product
+
+                &:nth-child(1)
+                    &::after
+                        display: none
+                    img
+                        width: 158px
+                &:nth-child(2)
+                    &::after
+                        left: -30%
+                    img
+                        width: 156pxF
