@@ -19,6 +19,7 @@
         transform: translateX(-50%)
         display: flex
         gap: 14px
+        z-index: 4
     &__dot
         border-radius: 3px
         background: #fff
@@ -34,19 +35,30 @@
         max-height: 666px
 
     &__slide
-        background-repeat: no-repeat
         background-color: $base-beige
-        background-position-x: right
-        background-size: 43.5% 100%
         border-radius: 50px
         overflow: hidden
-        display: flex
-        flex-flow: row wrap
-        gap: 6vw
         height: 666px
         width: 100%
+        position: relative
 
     .slide
+        &__content
+            position: relative
+            z-index: 3
+            display: flex
+            flex-flow: row wrap
+            gap: 6vw
+            height: 100%
+
+        &__bg
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+            width: 43.5%
+            height: 100%
+
         &__text
             max-width: 696px
             padding-top: 110px
@@ -74,6 +86,7 @@
             gap: 45px
             flex-grow: 1
             padding-bottom: 98px
+            position: relative
         &__product
             position: relative
 
@@ -94,44 +107,53 @@
                 opacity: 0.5
                 background: radial-gradient(50% 50% at 50% 50%, #000 0%, rgba(0, 0, 0, 0.00) 100%)
 
-            &:nth-child(1) .info
-                bottom: 0
-                left: -250px
+    .slide__product-info
+        position: absolute
+        top: 0
+        right: 0
+        display: flex
+        justify-content: space-between
+        width: 130%
+        height: 100%
+        padding-right: 3vw
+        padding-top: 40px
+        padding-bottom: 80px
+        .info
+            position: relative
+            width: 323px
+            padding: 22px 30px 23px
+            background: #fff
+            border-radius: 20px
+            color: $base-black
+            font-size: 20px
+            line-height: 170%
+            display: flex
+            flex-flow: column wrap
+            gap: 4px
+            z-index: 4
 
-            &:nth-child(2) .info
-                top: -60px
-                right: -282px
+            &:nth-child(1)
+                align-self: flex-end
 
-            .info
+            &:nth-child(2)
+                align-self: flex-start
+
+            a
                 position: absolute
-                width: 323px
-                padding: 22px 30px 23px
-                background: #fff
-                border-radius: 20px
-                color: $base-black
-                font-size: 20px
-                line-height: 170%
-                display: flex
-                flex-flow: column wrap
-                gap: 4px
-                z-index: 4
-
-                a
-                    position: absolute
-                    left: 0
-                    top: 0
-                    width: 100%
-                    height: 100%
-                    z-index: 6
+                left: 0
+                top: 0
+                width: 100%
+                height: 100%
+                z-index: 6
 
                 &:hover
                     .name
                         text-decoration: underline
 
-                .price
-                    color: $base-orange
-                    font-size: 30px
-                    line-height: 133.333%
+            .price
+                color: $base-orange
+                font-size: 30px
+                line-height: 133.333%
 
     @media (max-width: 1660px)
         .slide__product
@@ -141,3 +163,22 @@
             &:nth-child(2)
                 .info
                     right: -2vw
+
+    @media (max-width: 1380px)
+        .slide__content
+            flex-flow: column wrap
+            height: auto
+        .slide__products
+            padding: 0 110px 100px
+            justify-content: flex-end
+            &:nth-child(1), &:nth-child(2)
+                .info
+                    left: unset
+                    right: unset
+                    top: unset
+                    bottom: unset
+
+        &__slides
+            max-height: none
+        &__slide
+            height: auto
