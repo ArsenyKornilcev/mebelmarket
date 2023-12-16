@@ -1,5 +1,6 @@
 .advantages-grid
-    margin: 100px 0
+    &.section_with_margins
+        margin: 130px 0 100px
     &__items
         display: flex
         flex-flow: row nowrap
@@ -94,3 +95,10 @@
 
         &__item_wallet img
             bottom: -97px
+
+    @media (max-width: 768px)
+        &.section_with_margins
+            margin: 120px 0 168px
+    @media (max-width: 768px)
+        &.section_with_margins
+            margin: 111px 0 164px

@@ -1,3 +1,24 @@
+.section_with_margins
+    margin: 100px 0
+    .link
+        margin-top: 50px
+
+    &:nth-child(1)
+        margin-top: 40px
+
+@media (max-width: 768px)
+    .section_with_margins
+        margin: 80px 0
+        .link
+            margin-top: 30px
+        &:nth-child(1)
+            margin-top: 30px
+
+@media (max-width: 320px)
+    .section_with_margins
+        &:nth-child(1)
+            margin-top: 10px
+
 @import ./_slider
 @import ./_advantages
 @import ./_categories
