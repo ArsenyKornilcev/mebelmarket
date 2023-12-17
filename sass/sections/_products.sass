@@ -1,6 +1,9 @@
 .products
     .title
         margin-bottom: 40px
+    
+    .container
+        position: relative
 
     &__items
         display: grid
@@ -96,6 +99,7 @@
 
     &__cat
         padding: 8px 50px
+        min-width: max-content
         background: $base-beige
         border-radius: 10px
         cursor: pointer
@@ -131,3 +135,19 @@
         .item
             &_img
                 max-height: 155px
+
+    @media (max-width: 730px)
+        &__item
+            padding: 30px 20px
+
+        .arrows
+            position: absolute
+            bottom: 46px
+            left: 50%
+            transform: translateX(-50%)
+
+        .link
+            margin-top: 80px
+
+        &__cats
+            overflow-x: auto
