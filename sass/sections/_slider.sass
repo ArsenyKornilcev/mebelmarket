@@ -226,10 +226,18 @@
                     line-height: 150%
 
     @media (max-width: 768px)
+        .slide
+            &__text
+                gap: 30px
+            &__title
+                line-height: 50px
+        &__dots
+            bottom: 20px
+        &__slide
+            border-radius: 40px
         .slide__products
             padding: 0 24px 92px 50px
             .slide__product
-
                 &:nth-child(1)
                     &::after
                         display: none
@@ -260,7 +268,57 @@
             &__content
                 gap: 30px
             &__bg
-                transform: rotate(90deg)
                 top: unset
-                bottom: -300px
-                left: 196px
+                width: 120%
+                bottom: -557px
+                left: 0
+
+    @media (max-width: 480px)
+        .slide__products .slide__product:nth-child(2)::after
+            bottom: -22px
+        &__slide
+            border-radius: 30px
+        .slider__slide
+            span
+                padding: 3px 5px
+                font-size: 10px
+                line-height: 20px
+        .slide
+            &__bg
+                bottom: -327px
+            &__group
+                gap: 15px
+            &__title
+                font-size: 24px
+                line-height: 34px
+            &__text
+                padding: 30px 20px 0
+                gap: 0
+                .btn
+                    margin-top: 10px
+            &__products
+                justify-content: flex-start
+                padding: 0 30px 140px
+            &__product-info
+                padding: 0 1vw 45px
+                justify-content: space-between
+                height: fit-content
+                bottom: 0
+                top: unset
+                .info
+                    line-height: 20px
+                    gap: 0
+                    padding: 10px 16px
+                    max-width: 200px
+                    .name
+                        font-size: 12px
+
+            &__product img
+                max-width: 84px
+
+    @media (max-width: 320px)
+        .slide
+            &__product-info
+                padding: 0 0 45px
+                .info
+                    max-width: 174px
