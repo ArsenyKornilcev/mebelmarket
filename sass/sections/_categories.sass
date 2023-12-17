@@ -106,9 +106,8 @@
 
             &:nth-child(2)
                 img
-                    left: unset
-                    right: 20px
-                    bottom: 20px
+                    left: 41%
+                    bottom: 8%
                     top: unset
                     width: 55%
                     min-width: 226px
@@ -129,9 +128,8 @@
 @media (max-width: 1300px)
     .categories
         .categories__item
-            height: 33vw
-            min-height: 237px
-            max-height: 363px
+            min-height: 0
+            height: 300px
 
         &__item
             &:nth-child(1)
@@ -192,13 +190,19 @@
                     width: 19%
                     min-width: 74px
 
-@media (max-width: 900px)
+@media (max-width: 768px)
     .categories
         .title
             font-size: 20px
             line-height: 150%
-
-@media (max-width: 768px)
-    .categories
         &__item
             padding: 40px
+
+@media (max-width: 660px)
+    .categories
+        .categories__items
+            gap: 10px
+
+        .categories__item
+            max-width: none
+            width: 100%
