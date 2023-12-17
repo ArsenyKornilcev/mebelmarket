@@ -151,3 +151,25 @@
 
         &__cats
             overflow-x: auto
+
+    @media (max-width: 580px)
+        &__items
+            display: flex
+        &__item
+            max-height: none
+            width: 100%
+            .btns
+                flex-flow: row wrap
+                .btn
+                    width: 200px
+            &:nth-child(2)
+                display: none
+
+    @media (max-width: 580px)
+        &__item
+            max-height: none
+            width: 100%
+            .btns
+                flex-flow: column wrap
+                .btn
+                    width: 100%
