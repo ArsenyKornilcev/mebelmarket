@@ -5,14 +5,28 @@
 
     &:nth-child(1)
         margin-top: 40px
+section
+    .section__title
+        line-height: 125%
+        margin-bottom: 40px
 
 @media (max-width: 768px)
+    section
+        .section__title
+            line-height: 133.33%
+            margin-bottom: 30px
     .section_with_margins
         margin: 80px 0
         .link
             margin-top: 30px
         &:nth-child(1)
             margin-top: 30px
+
+@media (max-width: 425px)
+    section
+        .section__title
+            font-size: 24px
+            line-height: 34px
 
 @media (max-width: 320px)
     .section_with_margins
