@@ -103,6 +103,10 @@
                 display: flex
                 span
                     display: none
+                &-menu
+                    left: unset
+                    right: 0
+                    max-width: 300px
             .left_group
                 flex-grow: 1
             .right_group
@@ -188,3 +192,10 @@
             .right_group_search
                 .number, .location
                     display: none
+    @media (max-width: 375px)
+        &__menu
+            position: relative
+            .location
+                position: static
+                &-menu
+                    left: 0
