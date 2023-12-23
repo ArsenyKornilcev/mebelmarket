@@ -97,6 +97,21 @@
             .profile
                 span
                     display: none
+        &__menu
+            gap: 1.88rem
+            .location
+                display: flex
+                span
+                    display: none
+            .left_group
+                flex-grow: 1
+            .right_group
+                display: flex
+                flex-grow: 1
+                justify-content: space-between
+                gap: 1.88rem
+                align-items: center
+                flex-direction: row-reverse
     @media (max-width: 768px)
         &__top
             .number
@@ -118,10 +133,9 @@
         &__menu
             .info
                 display: none
-            .location, .number
-                display: flex
             .number
-                button
+                display: flex
+                a, button
                     display: none
             .search
                 flex-grow: 0
@@ -135,10 +149,21 @@
             .left_group
                 flex-grow: 1
                 justify-content: space-between
-                .right_group
-                    display: flex
-                    gap: 1.88rem
-                    align-items: center
+                flex-direction: row
+            .right_group
+                flex-grow: 0
+                justify-content: center
+            .right_group_search
+                .search
+                    flex-grow: 0
+                    min-width: 0
+                    max-width: fit-content
+                    input
+                        display: block
+                    button
+                        position: absolute
+                        transform: translateY(-50%)
+
     @media (max-width: 540px)
         &__menu
             .info
@@ -155,21 +180,11 @@
                 border-top: 1px solid rgba(62, 62, 62, 0.30)
                 border-bottom: 1px solid rgba(62, 62, 62, 0.30)
 
-            .number
-                a, button
-                    display: none
             .location
                 span
                     display: none
+            .left_group
+                max-height: 50px
             .right_group_search
                 .number, .location
                     display: none
-                .search
-                    flex-grow: 0
-                    min-width: 0
-                    max-width: fit-content
-                    input
-                        display: block
-                    button
-                        position: absolute
-                        transform: translateY(-50%)
