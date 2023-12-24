@@ -2,15 +2,19 @@
     display: flex
     gap: 1.88rem
 
+    &__item
+        &#cart
+            .info__pin:hover
+                path
+                    fill: $base-orange
+                    stroke: none
+
     &__pin
         display: flex
         gap: 0.88rem
         cursor: pointer
 
         &:hover
-            #cart
-                svg path
-                    fill: $base-orange
             svg
                 *
                     stroke: $base-orange
