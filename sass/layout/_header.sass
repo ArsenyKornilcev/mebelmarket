@@ -31,6 +31,9 @@
     &__menu
         order: 3
 
+        #cart
+            position: relative
+
         .search, .location, .number
             display: none
 
@@ -136,7 +139,18 @@
                 display: none
         &__menu
             .info
-                display: none
+                display: flex
+                justify-content: center
+                align-items: center
+                position: fixed
+                bottom: 0
+                left: 0
+                width: 100vw
+                z-index: 15
+                height: 3.25rem
+                background: #fff
+                border-top: 1px solid rgba(62, 62, 62, 0.30)
+                border-bottom: 1px solid rgba(62, 62, 62, 0.30)
             .number
                 display: flex
                 a, button
@@ -170,20 +184,6 @@
 
     @media (max-width: 540px)
         &__menu
-            .info
-                display: flex
-                justify-content: center
-                align-items: center
-                position: fixed
-                bottom: 0
-                left: 0
-                width: 100vw
-                z-index: 15
-                height: 3.25rem
-                background: #fff
-                border-top: 1px solid rgba(62, 62, 62, 0.30)
-                border-bottom: 1px solid rgba(62, 62, 62, 0.30)
-
             .location
                 span
                     display: none
