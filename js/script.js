@@ -30,3 +30,21 @@ up_btn__el.addEventListener("click", () => {
 		behavior: "smooth",
 	});
 });
+
+// SWIPER
+const swiper = new Swiper(".swiper", {
+	// Optional parameters
+	direction: "horizontal",
+	loop: true,
+
+	// If we need pagination
+	pagination: {
+		el: ".slider__dots",
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: ".arrow_next",
+		prevEl: ".arrow_prev",
+	},
+});
